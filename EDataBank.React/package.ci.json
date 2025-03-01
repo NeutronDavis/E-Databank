@@ -1,0 +1,11 @@
+{
+  "name": "edatabank",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "serve": "14.0.1"
+  },
+  "scripts": {
+    "start": "serve -s build"
+  }
+}

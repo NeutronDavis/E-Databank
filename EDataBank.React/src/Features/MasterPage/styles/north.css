@@ -1,0 +1,135 @@
+.QikReach {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 5px;
+
+  margin-top: -3px;
+}
+
+.QikReach-icon {
+  color: rgb(255, 170, 68);
+  font-weight: 800;
+}
+
+h1,
+article,
+footer {
+  padding: 1rem;
+}
+
+.content {
+  min-height: 95vh;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.push,
+.footer {
+  height: 50px;
+  width: 100vw;
+}
+
+.home-top-menu {
+  font-size: 13px !important;
+
+  background: white;
+  color: white;
+  box-shadow: 1px 1px 5px 3px #ccc;
+}
+
+.top-menu-nav {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+.top-menu-ul {
+  padding-top: 10px;
+  list-style: none;
+  font-size: inherit;
+  color: white;
+  display: inline;
+  list-style: none;
+}
+
+.to-link-item {
+  display: inline;
+
+  color: #262626;
+
+  padding: 10px 8px 10px;
+
+  margin-left: 4px !important;
+  margin-right: 10px !important;
+  background-color: transparent;
+  position: relative;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.to-link-item li {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+#topnav {
+  display: inline;
+}
+
+.home {
+  height: 48px;
+  padding-top: 10px;
+  background-color: #03a9f4;
+
+  text-align: center;
+  font-size: 30px;
+  vertical-align: middle;
+  height: 53px;
+  padding: 5px;
+  background-color: #8dc63f;
+  width: 60px;
+  text-align: center;
+}
+
+.home-icon {
+  font-size: 25px;
+}
+
+.home > a:hover {
+  color: #c8c8c8 !important;
+}
+
+.home > a {
+  color: white !important;
+  cursor: pointer;
+}
+
+.to-link-item a {
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+}
+
+.to-link-item:hover {
+  border-bottom: 2px solid rgb(0, 120, 212);
+}
+
+.blueicon {
+  color: #0078d4;
+}
+
+.hospital-name {
+  color: red;
+  height: 50px;
+  vertical-align: middle;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}

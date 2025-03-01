@@ -1,0 +1,15 @@
+{
+  "short_name": "ESOCS",
+  "name": "Eternal Sacred Order Of THe Cherubim And Seraphim data bank",
+  "icons": [
+    {
+      "src": "logo.gif",
+      "type": "image/gif",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

@@ -1,0 +1,38 @@
+.flexContainer {
+  margin-left: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  padding: 20px;
+}
+
+.flexBox{
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  align-items: center;
+  margin: 7px;
+  border: solid 4px #00000012;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+
+/* .flexContainer{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+} 
+.flexBox{
+  width: 350px;
+  margin: 7px;
+} */
+

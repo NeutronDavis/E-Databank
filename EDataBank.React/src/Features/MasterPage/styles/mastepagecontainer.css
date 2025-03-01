@@ -1,0 +1,287 @@
+
+.ant-menu-submenu-title {
+  background-color: #D92525 !important;
+}
+
+.ant-menu.ant-menu-dark {
+  background-color: #D92525 !important;
+}
+/* .ant-menu.ant-menu-dark {
+  background-color: #8dc63f !important;
+} */
+#components-layout-demo-fixed .logo {
+  float: left;
+  width: 120px;
+  height: 31px;
+  margin: 16px 24px 16px 0;
+  background: rgba(255, 255, 255, 0.2);
+}
+.site-layout .site-layout-background {
+  background: #fff;
+}
+
+.ms-DocumentCardActivity-avatar {
+  display: block;
+}
+#components-layout-demo-top-side .logo {
+  float: left;
+  width: 120px;
+  height: 31px;
+  margin: 16px 24px 16px 0;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.ant-row-rtl #components-layout-demo-top-side .logo {
+  float: right;
+  margin: 16px 0 16px 24px;
+}
+
+.site-layout-background {
+  background: #fff;
+}
+.ant-layout-sider-trigger {
+  background: #D92525;
+}
+.ant-layout-content {
+  background: white;
+}
+
+.ant-menu-dark .ant-menu-inline.ant-menu-sub {
+  background: white;
+}
+
+.ant-menu-inline.ant-menu-root .ant-menu-item > .ant-menu-title-content,
+.ant-menu-inline.ant-menu-root
+  .ant-menu-submenu-title
+  > .ant-menu-title-content {
+  flex: auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ant-menu-inline.ant-menu-root .ant-menu-item > *,
+.ant-menu-inline.ant-menu-root .ant-menu-submenu-title > * {
+  flex: none;
+}
+.ant-layout,
+.ant-layout * {
+  box-sizing: border-box;
+}
+.ant-menu-title-content {
+  transition: color 0.3s;
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+element {
+  cursor: pointer;
+}
+.ant-menu-dark .ant-menu-item,
+.ant-menu-dark .ant-menu-item-group-title,
+.ant-menu-dark .ant-menu-item > a,
+.ant-menu-dark .ant-menu-item > span > a {
+  color: black;
+  font-weight: 600;
+}
+
+.ant-menu-dark .ant-menu-item:hover > span > a,
+.ant-menu-dark .ant-menu-item-active > span > a {
+  color: #1890ff;
+}
+
+.ant-menu-dark .ant-menu-item-selected > span > a,
+.ant-menu-dark .ant-menu-item-selected > a:hover,
+.ant-menu-dark .ant-menu-item-selected > span > a:hover {
+  color: #1890ff;
+  font-weight: bold;
+}
+.ant-layout-sider-trigger,
+.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: white;
+  color: black;
+  border-left: 3px solid #D92525;
+}
+.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title {
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+}
+.ant-menu-inline.ant-menu-root .ant-menu-submenu-title {
+  display: flex;
+  align-items: center;
+  transition: border-color 0.3s, background 0.3s,
+    padding 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  font-size: 16px;
+}
+.ant-layout-sider-light .ant-layout-sider-trigger {
+  background: #D92525;
+  color: white;
+}
+.qicon {
+  /* color: #1890ff; */
+  /*  color: #FBA833; */
+  color: red;
+  font-size: 18px !important;
+  display: inline-block;
+
+  font-style: normal;
+
+  margin-right: 1px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.ant-layout {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  min-height: 0;
+  background: #ececec;
+}
+.ant-menu-item-only-child {
+  padding-left: 10px !important;
+}
+.ant-layout-sider-children {
+  border-right: 1px solid #ececec;
+  padding-right: 1px;
+}
+main.ant-layout-content.site-layout {
+  padding-left: 0px!;
+}
+.ant-layout-sider-has-trigger {
+  padding-bottom: 0px;
+}
+
+.login-text {
+  padding-top: 10px;
+}
+
+.ant-menu-horizontal {
+  line-height: 46px;
+  border: 0;
+  border-bottom-color: currentcolor;
+  border-bottom-style: none;
+  border-bottom-width: 0px;
+  border-bottom: 1px solid white;
+  box-shadow: none;
+}
+.ant-list-item-meta-description {
+  font-size: 14px;
+  line-height: 1.5715;
+  color: red;
+}
+
+.request-badge > span.ant-badge-status-dot {
+  width: 16px;
+  height: 16px;
+}
+
+.ant-select-dropdown.ant-select-dropdown-placement-bottomLeft {
+  z-index: 9999999999999;
+}
+
+.ant-notification,
+.ant-tooltip {
+  z-index: 99999999999999;
+}
+.ant-transfer-operation .ant-btn {
+  display: block;
+  width: 50px;
+  height: 50px;
+  color: white;
+}
+.ant-transfer-operation > button > span {
+  font-size: 16px !important;
+  color: white;
+}
+
+.panel-header {
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI",
+    -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(50, 49, 48);
+  line-height: 27px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+.mobileheader {
+  font-size: 16px;
+}
+.desktopheader {
+  font-size: 20px;
+}
+.ms-ProgressIndicator-itemDescription {
+  color: #108ee9;
+  font-weight: bold;
+}
+.ant-switch-checked {
+  background: #D92525;
+}
+.ms-Persona-secondaryText {
+  height: 25px !important;
+}
+.ant-transfer-list-content-item-remove {
+  color: red;
+}
+.ms-Button--compound {
+  background-color: #D92525;
+  color: white;
+}
+.ms-Button--compound .ms-Button-description {
+  color: white;
+}
+.ms-Button--compound .ms-Button-label {
+  font-size: 18px;
+}
+.ms-Button--compound:hover {
+  background-color: #108ee9;
+  color: white;
+}
+.ms-Button--compound .ms-Button-description:hover {
+  color: white;
+}
+
+.appoint-calendar-top {
+  border-top: 4px solid #8dc63f;
+
+  padding-top: 10px;
+}
+
+/* React Full Grid Calendar */
+
+.fc-timegrid-event {
+  background-color: white !important;
+  box-shadow: 5px 6px 1.8px 0 rgba(0, 0, 0, 0.108) !important;
+  border: none !important;
+}
+.fc-event-main {
+  padding: 1px 1px 0 !important;
+  color: #108ee9 !important;
+  font-size: 16px !important;
+}
+.fc .fc-button-primary:not(:disabled).fc-button-active {
+  color: #fff;
+  color: var(--fc-button-text-color, #fff);
+  background-color: #D92525 !important;
+  background-color: #D92525 !important;
+  border-color: #D92525 !important;
+  border-color: #D92525 !important;
+}
+
+.fc .fc-button-primary:hover {
+  color: #fff;
+  color: var(--fc-button-text-color, #fff);
+  background-color: #191B40 !important;
+  background-color: #191B40 !important;
+  border-color: #191B40 !important;
+  border-color: #191B40 !important;
+}
+.fc-view-harness {
+  height: 100vh !important;
+}
+/* End React Full Grid Calendar */

@@ -1,0 +1,57 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using EDataBank.Core.Entity.Account;
+using EDataBank.Core.Entity.General;
+using EDataBank.Core.Entity.Model;
+using EDataBank.Core.Enums;
+using EDataBank.Core.Views;
+
+namespace EDataBank.Application.Interfaces;
+public interface IUserService 
+{
+    Task RegisterUserAsync(Users users);
+    Task Uploadmembers(List<Users> member);
+    Task<List<Users>> GetUsersAsync();
+    Task UpdateUserRoleAsync(string userId,int roleType);
+    List<UserView> SearchMember(string searchString);
+    Task<Users> FindUserByIdAsync(string userId);
+    Task UpdateUserAsync(Users user);
+    Task RemoveUserAsync(Users user);
+    UserView GetUserViewById(string userId);
+    Task<bool> UserExistAsync(string useremail);
+    Task<bool> MemberExistAsync(string fullname);
+    Task<List<Users>> GetUploadedMemberAsync(int branchId);
+    Task<Users> MemberViaFullNameAsync(string fullname);
+    Task<Users> MemberViaFullNameAndBranchAsync(string fullname, int branchId);
+    Task<Users> AuthenticateAsync(string username, string password);
+    Task<Users> GetSingleUser(string userId);
+    Group GetUserGroups(string userId);
+    Task<Users> getUserByEmail(string email);
+    Task<bool> ValidateUser(string email, string password, string token);
+    Task AddUserToGroupAsync(string userId, int groupId, int branchId);
+    Task UpdateProfileVisit(string userid, int? lastVisitedSubMenuId, int? lastVisitedMenuId, string? LastVisitedMenuUrl);
+    Task UpdateProfileImageAsync(Users userParam);
+    Task DeleteAsync(string id);
+    Task<Users> UpdateBasicUserAsync(Users user, string? userId);
+    Task<Tuple<bool, Users>> GetUserByUserNameAsync(string email);
+    Task<Users> ResetPassword(Users data);
+    Task<bool> ChangePasswordAsync(string userId, string oldPassword, string newPassword, Users user);
+    Task<bool> sendFeedback(Feedback data);
+   string CreatePasswordHash(string password);
+    Task<List<Group>> GetGroupsAsync();
+    List<UserView> GetUsersView();
+    Task<List<Users>?> GetUserBySearchCriteriaAsync(string searchTerm, UserSearchCategory searchCategory);
+    List<Group> GeAllGroup();
+    Task InsertRolesAsync(List<Permission> roles);
+    List<PermissionView> GetGroupPermissions(int groupId);
+    List<UserView> GetUsersInRole(int groupId);
+    List<UserView> GetUsersInAGroup(int groupId);
+    Task RemoveUserFromRoleAsync(UserGroup userGroup);
+    List<PermissionView> GetUserPermissions(string userId);
+    Task<UserView> RegisterMemberFromSystem(Users users);
+    Task UploadOrdinations(List<Ordination> ordinations);
+    Task<List<Ordination>> OrdinationDataBlender(List<UploadedData> uploadeds, List<Users> users);
+}

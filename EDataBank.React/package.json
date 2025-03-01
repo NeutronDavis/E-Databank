@@ -1,0 +1,94 @@
+{
+  "name": "edatabank",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@fluentui/react": "^8.86.0",
+    "@fullcalendar/core": "^5.11.3",
+    "@fullcalendar/daygrid": "5.11.2",
+    "@fullcalendar/interaction": "^5.11.3",
+    "@fullcalendar/list": "^5.11.3",
+    "@fullcalendar/react": "^5.11.2",
+    "@fullcalendar/resource-daygrid": "^5.11.3",
+    "@fullcalendar/resource-timeline": "^5.11.3",
+    "@fullcalendar/timegrid": "5.11.2",
+    "@repay/react-credit-card": "^1.0.5",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.11.39",
+    "@types/react": "^18.0.12",
+    "@types/react-dom": "^18.0.5",
+    "accounting-js": "^1.1.1",
+    "ag-grid-community": "^28.1.0",
+    "ag-grid-enterprise": "^28.0.2",
+    "ag-grid-react": "^28.0.0",
+    "antd": "^4.21.0",
+    "antd-colorpicker": "^1.0.0",
+    "country-state-city": "^3.0.1",
+    "file-saver": "^2.0.5",
+    "formik": "^2.2.9",
+    "greet-by-time": "^1.0.1",
+    "highcharts": "^11.1.0",
+    "highcharts-more-node": "^5.0.13",
+    "highcharts-react-official": "^3.2.1",
+    "jwt-decode": "^4.0.0",
+    "mobx": "^6.6.1",
+    "mobx-react-lite": "^3.4.0",
+    "react": "^18.1.0",
+    "react-custom-scrollbars": "^4.2.1",
+    "react-detect-offline": "^2.4.5",
+    "react-dom": "^18.1.0",
+    "react-feather": "^2.0.10",
+    "react-full-screen": "^1.1.1",
+    "react-media": "^1.10.0",
+    "react-moment": "^1.1.2",
+    "react-paystack": "^4.0.1",
+    "react-phone-input-2": "^2.15.0",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "react-typescript-raw-html": "^0.0.9",
+    "react-use-device": "^1.0.11",
+    "superagent": "^7.1.6",
+    "superagent-promise": "^1.1.0",
+    "sweetalert2": "^11.9.0",
+    "sweetalert2-react-content": "^5.0.7",
+    "typescript": "^4.7.3",
+    "underscore": "^1.13.4",
+    "web-vitals": "^2.1.4",
+    "webpack": "^5.74.0",
+    "write-excel-file": "^1.3.9",
+    "xlsx": "^0.18.5",
+    "yup": "^0.32.11"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react-detect-offline": "^2.4.1"
+  }
+}

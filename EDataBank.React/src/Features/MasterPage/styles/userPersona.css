@@ -1,0 +1,105 @@
+.container {
+  height: 54px;
+}
+
+.align-center {
+  padding: 5px;
+}
+
+.lineadjust {
+  line-height: 1.5;
+}
+
+.notification-text {
+  display: inline-block;
+  padding-top: 5px;
+}
+
+.ms-Persona-primaryText {
+  text-transform: capitalize;
+  margin-top: 10px;
+}
+
+.ms-Persona-initials {
+  margin-top: 5px;
+}
+
+.notification .ant-badge {
+  padding: 8px !important;
+}
+
+.persona {
+  cursor: pointer;
+  padding-top: 1px;
+}
+
+.ms-Persona-secondaryText > div {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.permission-header {
+  color: #1890ff;
+}
+
+.permission-body {
+  padding-left: 30px;
+}
+
+.accept {
+  color: #1890ff;
+}
+
+.cancel {
+  color: red;
+}
+
+.top-menu-buttons {
+  font-size: 16px;
+  height: 53px;
+
+  line-height: 48px;
+  color: inherit;
+
+  text-align: center;
+  border-left: 1px solid #f0f2f5;
+  padding-top: 5px;
+}
+
+.top-menu-buttons > i {
+  font-size: 18px;
+}
+
+.light-border {
+  border-left: 1px solid #f0f2f5;
+  height: 53px;
+}
+
+.notification {
+  padding-top: 20px;
+  padding-left: 0px;
+}
+
+.home > a {
+  color: white !important;
+  cursor: pointer;
+}
+
+.home > a:hover {
+  color: #c8c8c8 !important;
+}
+
+.home-icon {
+  font-size: 25px;
+}
+.to-link-item > button.ms-Link > span {
+  text-decoration: none !important;
+  font-size: 15px;
+  color: black;
+}
+.user-personal-mobile {
+  float: right !important;
+  margin-right: 30px !important;
+  margin-top: 5px !important;
+}
