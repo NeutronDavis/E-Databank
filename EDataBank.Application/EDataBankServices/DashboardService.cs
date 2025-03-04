@@ -45,36 +45,34 @@ namespace EDataBank.Application.EDataBankServices
 
         }
 
-        public async Task<List<AdvisaryBoardInfo>> GetBoardInfo()
+        public List<AdvisaryBoard> GetBoardInfo()
         {
             try
             {
-                var rank = await _rankRepo.GetAllAsync();
-                var branch = await _branchRepo.FindAsync(x => x.BranchName == "ADVISORY BOARD");
-                var advisaryBoardInfo = new List<AdvisaryBoardInfo>();
-                if (branch != null)
+                var advisoryBoardMembers = _context.AdvisaryBoardInfos.FromSqlInterpolated($"EXEC GetAdvisoryBoard").ToList();
+       
+                var advisaryBoardInfo = new List<AdvisaryBoard>();
+              
+                if (advisoryBoardMembers.Count > 0)
                 {
-                    var advisoryBoardMembers = await _UserRepo.FilterAsync(x => x.BranchId == branch.BranchId);
-                    if (advisoryBoardMembers.Count > 0)
+                   advisoryBoardMembers.ForEach(x =>
                     {
-                        advisoryBoardMembers.ForEach(x=>
+                        var newAdvisoryM = new AdvisaryBoard()
                         {
-                            var newAdvisoryM = new AdvisaryBoardInfo()
-                            {
-                                Title = x.Title,
-                                OtherName = x.OtherName,
-                                LastName = x.LastName,
-                                CurrentPosition = x.CppInChurch,
-                                Rank = rank.Find(r => r.RankId == x.RankId)?.RankName,
-                                RankOrder = rank.Find(r => r.RankId == x.RankId)?.RankOrder,
-                                Pic = x.ProfilePics == null ? "" : Encoding.Default.GetString(x.ProfilePics)
-                            };
-                            advisaryBoardInfo.Add(newAdvisoryM);
-                        });
-                    }
-
+                            Title = x.Title,
+                            OtherName = x.OtherName,
+                            LastName = x.LastName,
+                            CurrentPosition = x.CppInChurch,
+                            Rank = x.RankName,
+                            RankOrder = x.RankOrder,
+                            Pic = x.ProfilePics == null ? "" : Encoding.Default.GetString(x.ProfilePics),
+                            
+                    };
+                        advisaryBoardInfo.Add(newAdvisoryM);
+                    });
                 }
-                return advisaryBoardInfo.OrderByDescending(x=> x.RankOrder).ToList();
+
+                return advisaryBoardInfo;
 
             }
             catch (Exception)

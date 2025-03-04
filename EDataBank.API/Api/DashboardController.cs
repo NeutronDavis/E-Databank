@@ -32,7 +32,7 @@ namespace EDataBank.API.Api
                 var resTtals = _dashboardService.GetTotalMembersMaleAndFemale();
                 var resMFCIP = _dashboardService.GetMaleAndFemaleCountInProvinces();
                 var resCMPFP = _dashboardService.GetCalculateMeberInProvinceForPies();
-                var advisoryBoard = await _dashboardService.GetBoardInfo();
+                var advisoryBoard =  _dashboardService.GetBoardInfo();
                 return Ok(new { success = true, data = new { totals = resTtals, mfcip = resMFCIP, cmpfp = resCMPFP, boardInfo = advisoryBoard } });
 
             }

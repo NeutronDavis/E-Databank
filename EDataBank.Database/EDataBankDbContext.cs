@@ -61,6 +61,7 @@ namespace EDataBank.Database
         public DbSet<UploadInfoView> UploadInfoViews => Set<UploadInfoView>();
         public DbSet<General_Report_Model2> General_Report_Model2s => Set<General_Report_Model2>();
         public DbSet<OrdinationProgressionView> OrdinationProgressionViews => Set<OrdinationProgressionView>();
+        public DbSet<AdvisaryBoardInfo> AdvisaryBoardInfos => Set<AdvisaryBoardInfo>();
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -79,6 +80,7 @@ namespace EDataBank.Database
             modelBuilder.Entity<UploadInfoView>().HasNoKey();
             modelBuilder.Entity<General_Report_Model2>().HasNoKey();
             modelBuilder.Entity<OrdinationProgressionView>().HasNoKey();
+            modelBuilder.Entity<AdvisaryBoardInfo>().HasNoKey();
 
             //map database View from the POCO
             modelBuilder.Entity<MenuView>().ToTable("Menu_vw", t => t.ExcludeFromMigrations());
@@ -96,6 +98,7 @@ namespace EDataBank.Database
             modelBuilder.Entity<UploadInfoView>().ToTable("uploadinfo_vw", t => t.ExcludeFromMigrations());
             modelBuilder.Entity<General_Report_Model2>().ToTable("generalprovincialmemberview", t => t.ExcludeFromMigrations());
             modelBuilder.Entity<OrdinationProgressionView>().ToTable("HighestYearOrdinationsWithAge", t => t.ExcludeFromMigrations());
+            modelBuilder.Entity<AdvisaryBoardInfo>().ToTable("AdvisaryBoardInfo", t => t.ExcludeFromMigrations());
         }
 
     }

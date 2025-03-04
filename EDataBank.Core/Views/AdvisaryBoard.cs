@@ -6,16 +6,14 @@ using System.Threading.Tasks;
 
 namespace EDataBank.Core.Views
 {
-    public class AdvisaryBoardInfo
+    public class AdvisaryBoard
     {
         public string? Title { get; set; }
         public string? OtherName { get; set; }
         public string? LastName { get; set; }
-        public string? RankName { get; set; }
-        public string? CppInChurch { get; set; }
-        public byte[]? ProfilePics { get; set; }
+        public string? Rank { get; set; }
+        public string? CurrentPosition { get; set; }
+        public string? Pic { get; set; }
         public int? RankOrder { get; set; }
-        public int? Year { get; set; }
-
     }
 }

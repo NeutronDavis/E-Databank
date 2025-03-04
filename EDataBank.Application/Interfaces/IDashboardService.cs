@@ -13,6 +13,6 @@ namespace EDataBank.Application.Interfaces
         TotalMembersMaleAndFemale GetTotalMembersMaleAndFemale();
         List<MaleAndFemaleCountInProvince> GetMaleAndFemaleCountInProvinces();
         List<CalculateMemberInProvinceForPie> GetCalculateMeberInProvinceForPies();
-        Task<List<AdvisaryBoardInfo>> GetBoardInfo();
+        List<AdvisaryBoard> GetBoardInfo();
     }
 }
