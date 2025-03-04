@@ -35,7 +35,8 @@ let initials: IOrdinationProgressionInput = {
   provinceId: 0,
   branchId: 0,
   rank: "",
-  year: 0
+  year: 0,
+  cmc: 0
 }
 function OrdinationProgressionQueryDialog() {
 
@@ -48,9 +49,11 @@ function OrdinationProgressionQueryDialog() {
   const [disableBranch, setDisableBranch] = useState(true)
   const [disableYear, setDisableYear] = useState(true)
   const [disableRank, setDisableRank] = useState(true)
+  const [disableCmc, setDisableCmc] = useState(true)
   const [disableProL, setDisableProL] = useState("Select province")
   const [disableBranchL, setDisableBranchL] = useState("Select branch")
   const [disableRankL, setDisableRankL] = useState("Select rank")
+  const [disableCmcL, setDisableCmcL] = useState("Select cmc")
 
   // useEffect(() => {
   //   async function getData() {
@@ -74,6 +77,7 @@ function OrdinationProgressionQueryDialog() {
         AdminStore.branchSwitchVal = "All"
         AdminStore.yearSwitchVal = "All"
         AdminStore.rankSwitchVal = "All"
+        AdminStore.cmcSwitchVal = "All"
         setDisableProv(true)
         setDisableProL("Select province")
 
@@ -84,10 +88,14 @@ function OrdinationProgressionQueryDialog() {
 
         setDisableRank(true)
         setDisableRankL("Select rank")
+
+        setDisableCmc(true)
+        setDisableCmcL("Select cmc")
         initials.branchId = 0
         initials.provinceId = 0
         initials.year = 0
         initials.rank = ""
+        initials.cmc = 0
       }}
       destroyOnClose={true}
       footer={false}
@@ -105,7 +113,8 @@ function OrdinationProgressionQueryDialog() {
             AdminStore.branchVal = values.branchId
             AdminStore.yearVal = values.year
             AdminStore.rankVal = values.rank
-            await AdminStore.getOrdinationProgressionReport(values.provinceId, values.branchId, values.rank, values.year);
+            AdminStore.cmcVal = values.cmc
+            await AdminStore.getOrdinationProgressionReport(values.cmc, values.provinceId, values.branchId, values.rank, values.year);
             AdminStore.openOrdinationProgressionReportDialog = false
           } catch (error: any) {
             // console.log("report error",error?.response?.body)
@@ -141,6 +150,57 @@ function OrdinationProgressionQueryDialog() {
           <Form onFinish={handleSubmit} layout="vertical">
             <div className="ms-Grid" dir="ltr">
               <div className="ms-Grid-row">
+                <div className="ms-Grid-col ms-sm12 ms-md4 ms-lg4 ">
+                  <div className="ms-Grid-row">
+                    <div className="ms-Grid-col ms-sm12 ms-md12 ms-lg12 ">
+                      <Segmented
+                        options={["All", "Select"]}
+                        value={AdminStore.cmcSwitchVal}
+                        onChange={(value: SegmentedValue) => {
+                          AdminStore.cmcSwitchVal = String(value)
+                          setDisableCmc(value == "Select" ? false : true)
+                          setDisableCmcL(value == "Select" ? "Select cmc" : "Select cmc")
+                          if (value == "All") {
+                            setFieldValue("cmc", 0);
+                          }
+                        }}
+                      ></Segmented>
+                    </div>
+                    <div className="ms-Grid-col ms-sm12 ms-md12 ms-lg12 ">
+                      <Form.Item
+                        help={touched.cmc || errors.cmc}
+                        label="cmc"
+                        required
+                      >
+                        <Select
+                          style={{ width: "100%" }}
+                          placeholder="select cmc"
+                          showSearch
+                          disabled={disableCmc}
+                          filterOption={(input, option) => {
+                            // console.log(input,option)
+                            return String(option!.value).toLowerCase().includes(input.toLowerCase())
+                          }
+                          }
+
+                          value={disableCmcL}
+                          onChange={(val, opt: any) => {
+                            setFieldValue("cmc", opt.key);
+                            setDisableCmcL(val)
+                          }}
+                        >
+                          {[...PlatformStore.cmcs.values()].map((province: ICmc) => (
+                            <Option value={province.cmcId} key={province.cmcId}>
+                              {province.cmcId}
+                            </Option>
+                          ))}
+                        </Select>
+
+                      </Form.Item>
+                    </div>
+                  </div>
+
+                </div>
                 <div className="ms-Grid-col ms-sm12 ms-md4 ms-lg4 ">
                   <div className="ms-Grid-row">
                     <div className="ms-Grid-col ms-sm12 ms-md12 ms-lg12 ">

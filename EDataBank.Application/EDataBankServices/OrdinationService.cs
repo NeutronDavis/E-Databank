@@ -333,12 +333,12 @@ namespace EDataBank.Application.EDataBankServices
             }
         }
 
-        public List<OrdinationProgressionView> MemberOrdinationProgessionReport(int provinceId, int branchId,string rank, int year)
+        public List<OrdinationProgressionView> MemberOrdinationProgessionReport(int cmc,int provinceId, int branchId,string rank, int year)
         {
             try
             {
                 var res = _context.OrdinationProgressionViews
-                    .FromSqlInterpolated($"EXEC GetOrdinationProgressionsByParameters { (provinceId != 0 ? (int?)provinceId : null)}, { (branchId != 0 ? (int?)branchId : null)}, {(!string.IsNullOrWhiteSpace(rank) ? rank : null)},{ (year != 0 ? (int?)year : null)}").ToList();
+                    .FromSqlInterpolated($"EXEC GetOrdinationProgressionsByParameters {(cmc != 0 ? (int?)cmc : null)},{ (provinceId != 0 ? (int?)provinceId : null)}, { (branchId != 0 ? (int?)branchId : null)}, {(!string.IsNullOrWhiteSpace(rank) ? rank : null)},{ (year != 0 ? (int?)year : null)}").ToList();
 
                 return res;
             }

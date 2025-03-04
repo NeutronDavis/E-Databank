@@ -162,11 +162,13 @@ class AdminStore implements IAdminStore {
   branchSwitchVal: string = "All";
   yearSwitchVal: string = "All";
   rankSwitchVal: string = "All";
+  cmcSwitchVal: string = "All";
 
   provinceVal: number = 0;
   branchVal: number = 0;
   yearVal: number = 0;
   rankVal: string = "";
+  cmcVal: number = 0;
   isDownloadingTemplate: boolean = false;
   reportRank: string = "";
   reportYear: number = 0;
@@ -196,10 +198,10 @@ class AdminStore implements IAdminStore {
       this.isLoadingUploadAnalysis = false;
     }
   }
-  async getOrdinationProgressionReport(provinceId: number, branchId: number, rank: string, year: number): Promise<void> {
+  async getOrdinationProgressionReport(cmc: number, provinceId: number, branchId: number, rank: string, year: number): Promise<void> {
     try {
       this.isLoadingReport = true;
-      let data = await AdminService.getOrdinationP(provinceId, branchId, rank, year)
+      let data = await AdminService.getOrdinationP(cmc, provinceId, branchId, rank, year)
       if (data.success) {
         this.ordinationProgression.clear()
         if (data.data.length > 0) {
@@ -976,10 +978,10 @@ class AdminStore implements IAdminStore {
       this.isLoadingReport = false;
     }
   }
-  async downloadOrdinationProgressionReport(provinceId: number, branchId: number, rank: string, year: number): Promise<void> {
+  async downloadOrdinationProgressionReport(cmc: number, provinceId: number, branchId: number, rank: string, year: number): Promise<void> {
     try {
       this.isDownloading = true;
-      let data = await AdminService.downloadOrdinationP(provinceId, branchId, rank, year)
+      let data = await AdminService.downloadOrdinationP(cmc, provinceId, branchId, rank, year)
       saveAs(data, `ordination_recommendation_report.pdf`);
       console.log(data)
     } catch (error) {

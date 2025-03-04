@@ -186,7 +186,7 @@ const OrdinationReport = (props: Props) => {
   };
   const getForRefreshOrdinationProgressionReport = async () => {
     try {
-      await adminStore.getOrdinationProgressionReport(adminStore.provinceVal, adminStore.branchVal, adminStore.rankVal, adminStore.yearVal)
+      await adminStore.getOrdinationProgressionReport(adminStore.cmcVal, adminStore.provinceVal, adminStore.branchVal, adminStore.rankVal, adminStore.yearVal)
     } catch (error: any) {
       // console.log("report error",error?.response?.body)
       //   console.log("report error",error)
@@ -206,7 +206,7 @@ const OrdinationReport = (props: Props) => {
   }
   const downloadOrdinationProgressionReport = async () => {
     try {
-      await adminStore.downloadOrdinationProgressionReport(adminStore.provinceVal, adminStore.branchVal, adminStore.rankVal, adminStore.yearVal)
+      await adminStore.downloadOrdinationProgressionReport(adminStore.cmcVal, adminStore.provinceVal, adminStore.branchVal, adminStore.rankVal, adminStore.yearVal)
     } catch (error: any) {
       //convert the blob to text so that you can extract the error message sent from the server
       // note this only happens when the agent responseType("blob")

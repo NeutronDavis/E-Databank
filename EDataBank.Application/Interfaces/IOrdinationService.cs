@@ -23,7 +23,7 @@ namespace EDataBank.Application.Interfaces
         List<GeneralReportModel> ProvincialMemberReport(int provinceId, int professionId);
         List<GeneralReportModel> MemberReport(int branchId, int professionId);
         List<GeneralReportModel> MemberReportByRankAndYear(string rank, int year);
-        List<OrdinationProgressionView> MemberOrdinationProgessionReport(int provinceId, int branchId, string rank, int year);
+        List<OrdinationProgressionView> MemberOrdinationProgessionReport(int cmc, int provinceId, int branchId, string rank, int year);
         List<General_Report_Model2> MemberProvincialReport(int provinceId);
         List<OrdinationReport> MemberOrdinationReport(int branchId, int professionId);
         Task AddUploadInfo(UploadInfo uploadInfo);

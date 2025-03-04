@@ -60,6 +60,6 @@ export const AdminService = {
   downloadMemberTemplate: () => client.getFile("/main/GetMemberUploadTemplate"),
 
   //ordination progression
-  downloadOrdinationP: (provinceId: number, branchId: number, rank: string, year: number) => client.getFile('/main/RenderOrdinationProgressionReport', { provinceId, branchId, rank, year }),
-  getOrdinationP: (provinceId: number, branchId: number, rank: string, year: number): Promise<EDBRequestResponse> => client.post('/main/GenerateOrdinationProgressionReport', { provinceId, branchId, rank, year }),
+  downloadOrdinationP: (cmc: number, provinceId: number, branchId: number, rank: string, year: number) => client.getFile('/main/RenderOrdinationProgressionReport', { cmc, provinceId, branchId, rank, year }),
+  getOrdinationP: (cmc: number, provinceId: number, branchId: number, rank: string, year: number): Promise<EDBRequestResponse> => client.post('/main/GenerateOrdinationProgressionReport', { cmc, provinceId, branchId, rank, year }),
 }

@@ -2308,11 +2308,11 @@ public async Task<List<ErrorModel>> ValidateRanksAsync(DataTable dataTable, stri
     }
 
     [HttpGet("[action]")]
-    public async  Task<IActionResult> RenderOrdinationProgressionReport(int provinceId, int branchId,string rank, int year)
+    public async  Task<IActionResult> RenderOrdinationProgressionReport(int cmc,int provinceId, int branchId,string rank, int year)
     {
         try
         {
-            var res = _ordinationService.MemberOrdinationProgessionReport(provinceId,branchId,rank, year);
+            var res = _ordinationService.MemberOrdinationProgessionReport(cmc,provinceId,branchId,rank, year);
 
 
             res = res.OrderByDescending(x => x.Gender).ToList();
@@ -2341,12 +2341,13 @@ public async Task<List<ErrorModel>> ValidateRanksAsync(DataTable dataTable, stri
     {
         try
         {
+            var cmc = param["cmc"]!.ToObject<int>();
             var provinceId = param["provinceId"]!.ToObject<int>();
             var branchId = param["branchId"]!.ToObject<int>();
             var year = param["year"]!.ToObject<int>();
             var rank = param["rank"]!.ToObject<string>();
 
-            var res = _ordinationService.MemberOrdinationProgessionReport(provinceId, branchId, rank!, year)
+            var res = _ordinationService.MemberOrdinationProgessionReport(cmc,provinceId, branchId, rank!, year)
                 .Select(e => new { e.FullName,e.Gender,e.BranchName,e.RankName,e.RankYear, e.NextRank,e.NextRankYear,e.YearsFromNow,e.Description}).ToList();
             res = res.OrderByDescending(x => x.Gender).ToList();
 

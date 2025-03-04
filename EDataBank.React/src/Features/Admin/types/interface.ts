@@ -152,18 +152,20 @@ export interface IAdminStore {
     branchSwitchVal: string,
     yearSwitchVal: string,
     rankSwitchVal: string,
+    cmcSwitchVal: string,
     provinceVal: number,
     branchVal: number,
     yearVal: number,
     rankVal: string,
+    cmcVal: number,
     isDownloadingTemplate: boolean,
     ordinationProgression: ObservableMap<number, IOrdinationProgressionView>,
     reportRank: string,
     reportYear: number,
     getAllUploadAnalysis(): Promise<void>,
     removeMemberRecordsViaUploadAnalysis(branchId: number): Promise<void>,
-    getOrdinationProgressionReport(provinceId: number, branchId: number, rank: string, year: number): Promise<void>,
-    downloadOrdinationProgressionReport(provinceId: number, branchId: number, rank: string, year: number): Promise<void>,
+    getOrdinationProgressionReport(cmc: number, provinceId: number, branchId: number, rank: string, year: number): Promise<void>,
+    downloadOrdinationProgressionReport(cmc: number, provinceId: number, branchId: number, rank: string, year: number): Promise<void>,
     genReport(branchId: number, professionId: number): Promise<void>,
     genReportByRankAndYear(rank: string, year: number): Promise<void>,
     updateMemberRole(userId: string, roleType: number): Promise<void>,
@@ -229,7 +231,8 @@ export interface IOrdinationProgressionInput {
     provinceId: number,
     branchId: number,
     rank: string,
-    year: number
+    year: number,
+    cmc: number
 }
 export interface IOrdinationProgressionView {
     fullName: string,
