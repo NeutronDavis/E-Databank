@@ -346,7 +346,7 @@ let {Item} = Timeline
                             ProfileStore.setShowFeedbackDialog();
                         }}
                         >
-                        <b>click hear </b>
+                        <b>click here </b>
                       </Link>{" "} to send a feedback</p>
             </div>
         </div>

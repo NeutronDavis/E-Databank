@@ -120,7 +120,7 @@ const LandingPage = (props: Props) => {
                 }}
               >
                 <CompoundButton
-                  secondaryText="For your analysis, click hear to easily navigate to your dashboard."
+                  secondaryText="For your analysis, click here to easily navigate to your dashboard."
                   onClick={() => {
                     masterPageStore.selectedMenuId = "2"; //my dashboard
                     masterPageStore.selectedSubMenuId = "3";
