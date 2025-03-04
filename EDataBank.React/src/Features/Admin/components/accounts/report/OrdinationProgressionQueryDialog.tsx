@@ -34,7 +34,7 @@ const adminStoreCtx = createContext(adminStore);
 let initials: IOrdinationProgressionInput = {
   provinceId: 0,
   branchId: 0,
-  rank: "",
+  rank: "0",
   year: 0,
   cmc: 0
 }
@@ -94,7 +94,7 @@ function OrdinationProgressionQueryDialog() {
         initials.branchId = 0
         initials.provinceId = 0
         initials.year = 0
-        initials.rank = ""
+        initials.rank = "0"
         initials.cmc = 0
       }}
       destroyOnClose={true}

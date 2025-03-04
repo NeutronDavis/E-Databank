@@ -338,7 +338,7 @@ namespace EDataBank.Application.EDataBankServices
             try
             {
                 var res = _context.OrdinationProgressionViews
-                    .FromSqlInterpolated($"EXEC GetOrdinationProgressionsByParameters {(cmc != 0 ? (int?)cmc : null)},{ (provinceId != 0 ? (int?)provinceId : null)}, { (branchId != 0 ? (int?)branchId : null)}, {(!string.IsNullOrWhiteSpace(rank) ? rank : null)},{ (year != 0 ? (int?)year : null)}").ToList();
+                    .FromSqlInterpolated($"EXEC GetOrdinationProgressionsByParameters {(cmc != 0 ? (int?)cmc : null)},{ (provinceId != 0 ? (int?)provinceId : null)}, { (branchId != 0 ? (int?)branchId : null)}, {(rank == "0" ? null : rank)},{ (year != 0 ? (int?)year : null)}").ToList();
 
                 return res;
             }
