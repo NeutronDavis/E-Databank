@@ -302,9 +302,9 @@ function OrdinationProgressionQueryDialog() {
                     <div className="ms-Grid-col ms-sm12 ms-md12 ms-lg12 ">
                       <Segmented
                         options={["All", "Select"]}
-                        value={AdminStore.branchSwitchVal}
+                        value={AdminStore.rankSwitchVal}
                         onChange={(value: SegmentedValue) => {
-                          AdminStore.branchSwitchVal = String(value)
+                          AdminStore.rankSwitchVal = String(value)
                           setDisableRank(value == "Select" ? false : true)
                           setDisableRankL(value == "Select" ? "Select rank" : "Select rank")
                           if (value == "All") {
